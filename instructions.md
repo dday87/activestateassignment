@@ -4,7 +4,7 @@ INSTRUCTIONS
 ------------
 0. Change permissions of buildpy.sh prior to use ([user@host]$chmod u+x buildpy.sh)
 1. build c-blosc 1.14.2 from source (USED BY python-blosc 1.5.1 build) 
-⋅⋅1. Find source URL "https://github.com/Blosc/c-blosc/archive/v1.14.2.tar.gz"
+⋅⋅* Find source URL "https://github.com/Blosc/c-blosc/archive/v1.14.2.tar.gz"
 ⋅⋅2. Create a working directory ([user@host]$ mkdir autobuildpy; cd autobuildpy)
 ⋅⋅3. Download source file using wget ([user@host]$ wget $CBLOSC_URL
 ⋅⋅4. Verify sha256sum checksums
