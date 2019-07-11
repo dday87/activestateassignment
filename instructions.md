@@ -66,7 +66,7 @@ autobuildsrc.sh
 ---------------
 1. extend interface to automate other builds
    * Extension script using the following setup
-   * ./autobuild.sh CCompiler CXXCompiler URL CMakeBuild[1=yes/0=no]
+   * ./autobuild.sh CCompiler CXXCompiler URL LIBRARY CMakeBuild[1=yes/0=no]
    * USAGE
    * first arg $1="C Compiler" e.g. nvcc
    * second arg $2="CXX Compiler" e.g. g++
