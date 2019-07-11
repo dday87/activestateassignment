@@ -2,6 +2,8 @@ ActiveState Linux Autobuild Assignment
 ======================================
 INSTRUCTIONS
 ------------
+buildpy.sh
+----------
 1. Change permissions of buildpy.sh prior to use 
    * ([user@host]$chmod u+x buildpy.sh)
 
@@ -58,14 +60,17 @@ INSTRUCTIONS
    * cd Python-3.5.4; mkdir build; cd build;
    * Configure for host system [user@host]$ ../configure | tee buildlog.txt
    * Time build and output to log [user@host]$ time KBUILD_TIMESTAMP='' make -j $(nproc) | tee buildlog.txt
-   * Install to ~/usr/local [user@host]$make DESTDIR=~/ install -j $(nproc)
+   * Install to "~/usr/local [user@host]$make DESTDIR=~/ install -j $(nproc)"
 
-6. extend interface to automate other builds
+autobuildsrc.sh
+---------------
+1. extend interface to automate other builds
    * Extension script using the following setup
    * ./autobuild.sh CCompiler CXXCompiler URL CMakeBuild[1=yes/0=no]
    * USAGE
    * first arg $1="C Compiler" e.g. nvcc
    * second arg $2="CXX Compiler" e.g. g++
    * third arg $3=$SRC_URL e.g. https://github.com/Kitware/CMake/releases/download/v3.15.0-rc4/cmake-3.15.0-rc4.tar.gz
-   * fourth arg $4=[1/0] e.g. does the source archive use cmake or configure?
+   * fourth arg $4=$LIBRARY e.g. cmake-3.15.0-rc4.tar.gz
+   * fifth arg $5=[1/0] e.g. does the source archive use cmake or configure?
 

@@ -9,10 +9,11 @@ CMAKE_BUILD=$5
 wget "$URL"
 sha256sum "$LIBRARY" > "$LIBRARY".sha256
 sha256sum -c "$LIBRARY".sha256
+tar -xvf "$LIBRARY".tar.gz
 cd $LIBRARY
 mkdir build
 cd build
-If [ "$CMAKE_BUILD" EQ "1"  ]
+if [ "$CMAKE_BUILD" EQ "1"  ]
 then
 	cmake .. | tee cmakelog.txt
 	time KBUILD_TIMESTAMP='' CC=$CC CXX=$CXX make -j $(nproc) | tee buildlog.txt
